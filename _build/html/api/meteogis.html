@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>meteogis package &mdash; MeteoGIS 1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=292eb321"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="meteogis.analysis package" href="meteogis.analysis.html" />
+    <link rel="prev" title="meteogis" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MeteoGIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">meteogis package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#meteogis.spi"><code class="docutils literal notranslate"><span class="pre">spi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meteogis.spei"><code class="docutils literal notranslate"><span class="pre">spei()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meteogis.idw"><code class="docutils literal notranslate"><span class="pre">idw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meteogis.read_file"><code class="docutils literal notranslate"><span class="pre">read_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meteogis.to_file"><code class="docutils literal notranslate"><span class="pre">to_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.html">meteogis.analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.html">meteogis.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.raster.html">meteogis.raster package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.utils.html">meteogis.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.vector.html">meteogis.vector package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.climate.html">meteogis.climate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.read_file.html">meteogis.read_file module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.to_file.html">meteogis.to_file module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MeteoGIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">meteogis</a></li>
+      <li class="breadcrumb-item active">meteogis package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/meteogis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-meteogis">
+<span id="meteogis-package"></span><h1>meteogis package<a class="headerlink" href="#module-meteogis" title="Link to this heading"></a></h1>
+<p>meteogis — geospatial and climate-analysis toolkit.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="meteogis.spi">
+<span class="sig-prename descclassname"><span class="pre">meteogis.</span></span><span class="sig-name descname"><span class="pre">spi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/meteogis/analysis/spi.html#spi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#meteogis.spi" title="Link to this definition"></a></dt>
+<dd><p>Calculate the Standardized Precipitation Index (SPI).</p>
+<dl>
+<dt>Parameters:</dt><dd><p>ds: pandas Series, precipitation data.</p>
+<p>thresh: int, rolling window size in months.</p>
+</dd>
+<dt>Returns:</dt><dd><p>spi: pandas Series, SPI values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meteogis.spei">
+<span class="sig-prename descclassname"><span class="pre">meteogis.</span></span><span class="sig-name descname"><span class="pre">spei</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/meteogis/analysis/spei.html#spei"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#meteogis.spei" title="Link to this definition"></a></dt>
+<dd><p>Calculate the Standardized Precipitation-Evapotranspiration Index (SPEI).</p>
+<dl>
+<dt>Parameters:</dt><dd><p>precipitation: pandas Series, precipitation data.</p>
+<p>pet: pandas Series, potential evapotranspiration data.</p>
+<p>window: int, rolling window size in months.</p>
+</dd>
+<dt>Returns:</dt><dd><p>spei: pandas Series, SPEI values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meteogis.idw">
+<span class="sig-prename descclassname"><span class="pre">meteogis.</span></span><span class="sig-name descname"><span class="pre">idw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/meteogis/analysis/idw.html#idw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#meteogis.idw" title="Link to this definition"></a></dt>
+<dd><p>Parameters:</p>
+<blockquote>
+<div><p>input_path: Path to the file to read.</p>
+<p>output_path: Path to the file to write.</p>
+<p>attribute</p>
+<p>resolution</p>
+<p>power</p>
+</div></blockquote>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>power</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meteogis.read_file">
+<span class="sig-prename descclassname"><span class="pre">meteogis.</span></span><span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/meteogis/read_file.html#read_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#meteogis.read_file" title="Link to this definition"></a></dt>
+<dd><p>Read a file (raster or vector), auto-dispatching on file extension.</p>
+<p>Tries the driver registry first (covers every registered vector
+format, plus .tif/.tiff via GTiffDriver). Falls back to GDAL’s
+generic raster reader for formats with no registered driver
+(.nc, .hdf, .img, etc.) — GDAL auto-detects those on its own.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path to the file to read.</p></li>
+<li><p><strong>**kwargs</strong> – Forwarded to the matching driver’s read() (or read_raster()
+on fallback).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Vector</strong> (<em>tuple[list[tuple[shapely.Geometry, dict]], str | None] — (dataset, crs)</em>)</p></li>
+<li><p><strong>Raster (via a registered driver, e.g. .tif)</strong> (<em>whatever that driver’s</em>) – read() returns (currently the raw gdal.Dataset for GTiffDriver).</p></li>
+<li><p><strong>Raster (fallback, e.g. .nc)</strong> (<em>raw gdal.Dataset.</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meteogis.to_file">
+<span class="sig-prename descclassname"><span class="pre">meteogis.</span></span><span class="sig-name descname"><span class="pre">to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/meteogis/to_file.html#to_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#meteogis.to_file" title="Link to this definition"></a></dt>
+<dd><p>Write data to a file (raster or vector), auto-dispatching on file extension.</p>
+<p>Tries the driver registry first (covers every registered vector
+format, plus .tif/.tiff via GTiffDriver). Falls back to GDAL’s
+generic raster writer for formats with no registered driver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>Vector: list</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><em>shapely.Geometry</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>]</em><em>]</em>) – Raster: gdal.Dataset | np.ndarray
+Data to write. Matches whatever the corresponding read_file()
+call for this format would have returned.</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Path to write to.</p></li>
+<li><p><strong>**kwargs</strong> – Forwarded to the matching driver’s write() (or write_raster()
+on fallback) — e.g. crs=&lt;WKT or “EPSG:xxxx”&gt; for vector formats,
+geometry_mode for CSV.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.analysis.html">meteogis.analysis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.analysis.html#meteogis.analysis.spi"><code class="docutils literal notranslate"><span class="pre">spi()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.analysis.html#meteogis.analysis.spei"><code class="docutils literal notranslate"><span class="pre">spei()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.analysis.html#meteogis.analysis.idw"><code class="docutils literal notranslate"><span class="pre">idw()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.analysis.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.analysis.idw.html">meteogis.analysis.idw module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.idw.html#meteogis.analysis.idw.inverse_distance_weighting"><code class="docutils literal notranslate"><span class="pre">inverse_distance_weighting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.idw.html#meteogis.analysis.idw.idw"><code class="docutils literal notranslate"><span class="pre">idw()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.analysis.kriging.html">meteogis.analysis.kriging module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.kriging.html#meteogis.analysis.kriging.kriging_interpolation"><code class="docutils literal notranslate"><span class="pre">kriging_interpolation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.analysis.spei.html">meteogis.analysis.spei module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.spei.html#meteogis.analysis.spei.spei"><code class="docutils literal notranslate"><span class="pre">spei()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.analysis.spi.html">meteogis.analysis.spi module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.spi.html#meteogis.analysis.spi.spi"><code class="docutils literal notranslate"><span class="pre">spi()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.analysis.zonal.html">meteogis.analysis.zonal module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.analysis.zonal.html#meteogis.analysis.zonal.zonal_statistics"><code class="docutils literal notranslate"><span class="pre">zonal_statistics()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.io.html">meteogis.io package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#meteogis.io.read_raster"><code class="docutils literal notranslate"><span class="pre">read_raster()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#meteogis.io.read_raster_array"><code class="docutils literal notranslate"><span class="pre">read_raster_array()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#meteogis.io.write_raster"><code class="docutils literal notranslate"><span class="pre">write_raster()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#meteogis.io.read_vector"><code class="docutils literal notranslate"><span class="pre">read_vector()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#meteogis.io.write_vector"><code class="docutils literal notranslate"><span class="pre">write_vector()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.io.drivers.html">meteogis.io.drivers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.drivers.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.io.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.io.raster.html">meteogis.io.raster module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.raster.html#meteogis.io.raster.RasterDataset"><code class="docutils literal notranslate"><span class="pre">RasterDataset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.raster.html#meteogis.io.raster.read_raster"><code class="docutils literal notranslate"><span class="pre">read_raster()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.raster.html#meteogis.io.raster.read_raster_array"><code class="docutils literal notranslate"><span class="pre">read_raster_array()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.raster.html#meteogis.io.raster.write_raster"><code class="docutils literal notranslate"><span class="pre">write_raster()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.io.registry.html">meteogis.io.registry module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.registry.html#meteogis.io.registry.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.registry.html#meteogis.io.registry.get_driver"><code class="docutils literal notranslate"><span class="pre">get_driver()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.io.vector.html">meteogis.io.vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.vector.html#meteogis.io.vector.read_vector"><code class="docutils literal notranslate"><span class="pre">read_vector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.io.vector.html#meteogis.io.vector.write_vector"><code class="docutils literal notranslate"><span class="pre">write_vector()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.raster.html">meteogis.raster package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.raster.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.calculator.html">meteogis.raster.calculator module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.clip.html">meteogis.raster.clip module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.raster.clip.html#meteogis.raster.clip.clip"><code class="docutils literal notranslate"><span class="pre">clip()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.contours.html">meteogis.raster.contours module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.hillshade.html">meteogis.raster.hillshade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.polygonize.html">meteogis.raster.polygonize module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.raster.raster_to_point.html">meteogis.raster.raster_to_point module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.utils.html">meteogis.utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.vector.html">meteogis.vector package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.vector.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.buffer.html">meteogis.vector.buffer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.vector.buffer.html#meteogis.vector.buffer.buffer"><code class="docutils literal notranslate"><span class="pre">buffer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.clip.html">meteogis.vector.clip module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="meteogis.vector.clip.html#meteogis.vector.clip.clip"><code class="docutils literal notranslate"><span class="pre">clip()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.dissolve.html">meteogis.vector.dissolve module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.merge.html">meteogis.vector.merge module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.reproject.html">meteogis.vector.reproject module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.simplify.html">meteogis.vector.simplify module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="meteogis.vector.union.html">meteogis.vector.union module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.climate.html">meteogis.climate module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.read_file.html">meteogis.read_file module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.read_file.html#meteogis.read_file.read_file"><code class="docutils literal notranslate"><span class="pre">read_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meteogis.to_file.html">meteogis.to_file module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meteogis.to_file.html#meteogis.to_file.to_file"><code class="docutils literal notranslate"><span class="pre">to_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="meteogis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="meteogis.analysis.html" class="btn btn-neutral float-right" title="meteogis.analysis package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, David Duyile.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
