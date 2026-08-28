@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meteogis"
+version = "0.1.0"
+description = "A Python package for meteorological GIS data processing and analysis."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["meteorology", "GIS", "data processing", "analysis", "Python"]
+authors = [
+    { name = "David Akinduyile", email = "thatpythonguy96@gmail.com" }
+]
+dependencies = [
+    "numpy >= 2.5.1",
+    "rasterio >= 1.5.0",
+    "geopandas >= 1.1.4",
+    "pyogrio >= 0.8",
+    "pandas >= 2.2.0",
+    "pyproj >= 3.7.0",
+    "shapely >= 2.1.0",
+    "rasterio >= 1.5.0",
+    "scipy >=1.18.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Thatpythonguy96/my_package"
+
+[tool.setuptools.packages.find]
+where = ["src"]
